@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+
+}
+
+
+/* section-css */
+section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background: url(./img/t-1.jpg);
+    background-position: center;
+    background-size: cover;
+
+}
+
+/* section-css */
+
+
+/* box_form-css */
+.box_form {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    backdrop-filter: blur(3px);
+    border-radius: 50px;
+}
+
+/* box_form-css */
+
+
+/* h2-css */
+h2 {
+    text-align: center;
+    font-size: 3em;
+    color: #636161;
+}
+
+/* h2-css */
+
+
+/* boxin-css */
+.boxin {
+    position: relative;
+    width: 310px;
+    margin: 30px 0;
+    border-bottom: 3px solid #fff;
+}
+
+/* boxin-css */
+
+
+
+/* .boxin-label-css */
+.boxin label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    pointer-events: none;
+    color: #fff;
+    transform: translateY(-50%);
+    transition: .4s;
+    font-size: 1em;
+}
+
+/* .boxin-label-css */
+
+
+
+/* boxin-input-css */
+input:focus~label,
+input:valid~label {
+    top: -5px;
+}
+
+.boxin input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    font-size: 15px;
+    color: #fff;
+    outline: none;
+    border: none;
+    padding: 0 35px 0 5px;
+
+}
+
+/* boxin-input-css */
+
+
+
+
+/* boxin-ion-icon-css */
+.boxin ion-icon {
+    color: #fff;
+    font-size: 1.3em;
+    position: absolute;
+    right: 9px;
+    top: 20px;
+}
+
+/* boxin-ion-icon-css */
+
+
+
+/* forget-css */
+.forget {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    margin: -14px 0 14px;
+
+}
+
+/* forget-css */
+
+
+
+/* forget-label-input-css */
+.forget label a {
+    text-decoration: none;
+    color: #fff;
+
+}
+
+.forget label a:hover {
+    text-decoration: underline overline #E2E2E2;
+
+
+
+}
+
+/* forget-label-input-css */
+
+
+/* forget-label-input-css */
+.forget label input {
+    margin-right: 3px;
+}
+
+/* forget-label-input-css */
+
+
+
+/* button-css */
+button {
+    font-size: 1.2em;
+    font-weight: 700;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 50px;
+    background: #fff;
+    color: #636161;
+}
+
+/* button-css */
+
+
+/* register-css */
+.register {
+    margin: 25px 0 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 1em;
+}
+
+.register p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.register p a:hover {
+    text-decoration: underline overline #E2E2E2;
+}
+
+/* register-css */
