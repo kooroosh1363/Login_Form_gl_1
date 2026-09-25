@@ -1,41 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>RAAD-Login-Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A modern accessible glassmorphism login UI demo with local validation and password visibility controls.">
+  <meta name="color-scheme" content="light dark">
+  <title>GlassGate — Accessible Login UI</title>
+  <link rel="stylesheet" href="./assets/style.css">
+  <script type="module" src="./assets/js/javas.js"></script>
 </head>
 <body>
-    <section>
-        <div class="box_form">
-            <div class="value_form">
-                <form action="">
-                    <h2>LOGIN</h2>
-                    <div class="boxin">
-                        <ion-icon name="mail-outline"></ion-icon>
-                        <input type="email" required>
-                        <label for="">EMAIL</label>
-                    </div>
-                    <div class="boxin">
-                        <ion-icon name="lock-closed-outline"></ion-icon>
-                        <input type="password" required>
-                        <label for="">PASSWORD</label>
-                    </div>
-                    <div class="forget">
-                        <label for=""><input type="checkbox">Remember Me  <a href="#">Forget Password</a></label>
-                    </div>
-                    <button>LOGIN</button>
-                    <div class="register">
-                        <p>Don't have a account <a href="#">Register</a></p>
-                    </div>
-                </form>
-            </div>
-        </div>
-        
+  <a class="skip-link" href="#login-form">Skip to login form</a>
+
+  <main class="page-shell">
+    <section class="intro-panel" aria-labelledby="page-title">
+      <a class="brand" href="./" aria-label="GlassGate home">
+        <span class="brand-mark" aria-hidden="true">G</span>
+        <span>GlassGate</span>
+      </a>
+
+      <div class="intro-copy">
+        <p class="eyebrow">Glassmorphism / accessible by design</p>
+        <h1 id="page-title">A polished login UI that does not pretend to be authentication.</h1>
+        <p>
+          This static demo focuses on form interaction, validation, remember-email behavior,
+          password visibility, and keyboard accessibility. No credentials are transmitted.
+        </p>
+      </div>
+
+      <ul class="principles">
+        <li><span>01</span><strong>Semantic fields</strong><small>Real labels, correct autocomplete, visible errors.</small></li>
+        <li><span>02</span><strong>Password stays private</strong><small>Never persisted, echoed, or sent anywhere.</small></li>
+        <li><span>03</span><strong>Progressive UI</strong><small>Zero framework and zero third-party runtime dependency.</small></li>
+      </ul>
     </section>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>    
+
+    <section class="login-panel" aria-labelledby="login-title">
+      <div class="glass-card">
+        <p class="section-index">Demo access / 01</p>
+        <h2 id="login-title">Sign in</h2>
+        <p class="form-intro">Use any well-formed email and a password of at least 8 characters to exercise the UI flow.</p>
+
+        <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+
+        <form id="login-form" novalidate>
+          <div class="field">
+            <input id="email" name="email" type="email" autocomplete="username" maxlength="254" placeholder=" " required aria-describedby="email-error">
+            <label for="email">Email</label>
+            <p id="email-error" class="field-error" aria-live="polite"></p>
+          </div>
+
+          <div class="field">
+            <div class="password-wrap">
+              <input id="password" name="password" type="password" autocomplete="current-password" minlength="8" maxlength="128" placeholder=" " required aria-describedby="password-error caps-lock-status">
+              <label for="password">Password</label>
+              <button id="password-toggle" class="password-toggle" type="button" aria-pressed="false" aria-label="Show password">Show</button>
+            </div>
+            <p id="caps-lock-status" class="field-hint" role="status"></p>
+            <p id="password-error" class="field-error" aria-live="polite"></p>
+          </div>
+
+          <label class="remember-row" for="remember">
+            <input id="remember" name="remember" type="checkbox">
+            <span>Remember email on this device</span>
+          </label>
+
+          <button id="submit-button" class="primary-button" type="submit">Continue</button>
+        </form>
+
+        <div class="privacy-note">
+          <span aria-hidden="true">i</span>
+          <p>This is a frontend interaction demo. No authentication request is made and no password is stored.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
